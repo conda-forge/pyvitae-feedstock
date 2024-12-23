@@ -1,5 +1,5 @@
 {% set name = "pyvitae" %}
-{% set version = "2.0.7" %}
+{% set version = "2.0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,8 @@ package:
 
 source:
   url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 37c0df1482bd15a083df9f75f8b12b104bbb29ad6b0ee91bfc42e66f8f86760c
+  sha256: b7c51c40142f008f5081c5cd3080b2fa8472ee697c98005466c8054b805bd57e
+
 
 build:
   noarch: python
