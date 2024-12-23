@@ -9,6 +9,7 @@ source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
   sha256: b7c51c40142f008f5081c5cd3080b2fa8472ee697c98005466c8054b805bd57e
 
+
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
@@ -18,6 +19,7 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools
   run:
     - jupyter
     - leidenalg
@@ -31,7 +33,7 @@ requirements:
     - scikit-learn
     - seaborn
     - statsmodels
-    - tensorflow >=2.4
+    - tensorflow >=2.4,<2.16
     - tensorflow-probability >=0.13
     - umap-learn >=0.5.0
 
