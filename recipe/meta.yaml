@@ -13,12 +13,12 @@ source:
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
   run:
     - jupyter
@@ -28,7 +28,7 @@ requirements:
     - numpy ==1.23
     - numba
     - pandas
-    - python >=3.8
+    - python >={{ python_min }}
     - scanpy >=1.8.2
     - scikit-learn
     - seaborn
@@ -39,6 +39,8 @@ requirements:
 
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - VITAE
 
